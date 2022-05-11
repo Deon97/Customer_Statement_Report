@@ -1,0 +1,96 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="test123" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1307.2,830.4" sap2010:WorkflowViewState.IdRef="test123_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="26">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="test123" sap:VirtualizedContainerService.HintSize="452,622.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="crystal_done" />
+      <Variable x:TypeArguments="x:Boolean" Name="exist_image" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InterruptibleDoWhile DisplayName="Wait forReport process" sap:VirtualizedContainerService.HintSize="410.4,429.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+      <ui:InterruptibleDoWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,262.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ImageFound DisplayName="Image Exists 'crw32.exe SAP'" Found="[crystal_done]" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_6">
+            <ui:ImageFound.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+            </ui:ImageFound.Image>
+            <ui:ImageFound.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2ed55b6e-c02d-47d6-983e-09a919b398b3" Selector="&lt;wnd app='crw32.exe' cls='Afx:*' title='SAP Crystal Reports - [Customer Statement Report-Include Payment*' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+            </ui:ImageFound.Target>
+          </ui:ImageFound>
+          <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </Sequence>
+      </ui:InterruptibleDoWhile.Body>
+      <ui:InterruptibleDoWhile.Condition>
+        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="crystal_done =False" />
+      </ui:InterruptibleDoWhile.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InterruptibleDoWhile>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="410.4,60" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;True&quot;]" />
+  </Sequence>
+</Activity>
